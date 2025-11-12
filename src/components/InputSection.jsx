@@ -22,6 +22,12 @@ export default function InputSection({ onValidInput }) {
         value={value}
         placeholder="Enter number (5–25)"
         onChange={(e) => setValue(e.target.value)}
+        onWheel={(e) => e.target.blur()}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+          }
+        }}
       />
       <button onClick={validateInput}>Generate</button>
       {error && <p className="error">{error}</p>}

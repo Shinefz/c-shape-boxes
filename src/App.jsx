@@ -5,7 +5,6 @@ import './App.css';
 
 function App() {
   const [boxCount, setBoxCount] = useState(null);
-  const [layout, setLayout] = useState('c-shape');
 
   return (
     <div className="app">
@@ -13,13 +12,9 @@ function App() {
 
       <InputSection
         onValidInput={setBoxCount}
-        onToggleLayout={() =>
-          setLayout((prev) => (prev === 'grid' ? 'c-shape' : 'grid'))
-        }
-        isCLayout={layout === 'c-shape'}
       />
 
-      {boxCount && <BoxGrid count={boxCount} layout={layout} />}
+      {boxCount && <BoxGrid count={boxCount} />}
     </div>
   );
 }

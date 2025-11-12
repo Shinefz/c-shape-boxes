@@ -1,0 +1,56 @@
+.box-grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .box {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .reverting {
+    opacity: 0.8;
+  }
+  
+  .status {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  @media (max-width: 600px) {
+    .box {
+      width: 45px;
+      height: 45px;
+      font-size: 12px;
+    }
+  }
